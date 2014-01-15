@@ -191,7 +191,7 @@ def fetch_ip_data():
     url=r'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest'
     data=urllib2.urlopen(url).read()
     
-    cnregex=re.compile(r'apnic\|cn\|ipv4\|[0-9\.]+\|[0-9]+\|[0-9]+\|a.*',re.IGNORECASE)
+    cnregex=re.compile(r'apnic\|us\|ipv4\|[0-9\.]+\|[0-9]+\|[0-9]+\|a.*',re.IGNORECASE)
     cndata=cnregex.findall(data)
     
     results=[]
